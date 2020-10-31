@@ -6,7 +6,7 @@ public class Menu {
 	public void startMenu() {
 		System.out.println("메뉴를 선택하세요.");
 		System.out.println("1. 게임시작");
-		System.out.println("2. 게임설정");
+		System.out.println("2. 불러오기");
 		System.out.println("3. 게임종료");
 	}
 	

@@ -6,7 +6,7 @@ import java.util.Scanner;
 public class InputMenu {
 	Menu menu = new Menu();
 	Scanner sc = new Scanner(System.in);
-	
+	Save save = new Save();
 	//method 명 : mainMenu
 	//파라메터 : String Input
 	//리턴 : x
@@ -21,9 +21,13 @@ public class InputMenu {
 			tutorial();
 			town();
 		}else if("2".equals(input)) {
-			System.out.println("게임 설정입니다.");
+			System.out.println("저장된 게임을 불러옵니다.");
+			save.load();
+			town();
 		}else if("3".equals(input)) {
 			System.out.println("게임을 종료합니다.");
+			//자바 강제 종료처리
+			System.exit(0);
 		}else {
 			System.out.println("잘못된 입력입니다. 다시 선택해주세요.");
 		}
@@ -149,9 +153,10 @@ public class InputMenu {
 				System.out.println("게임을 저장합니다.");
 				save.save(c);
 			}else if("6".equals(input)) {
-				
+				System.out.println("게임종료합니다.");
+				System.exit(0);
 			}else {
-				
+				System.out.println("잘못된 번호를 입력하셨습니다. 다시 입력해주세요.");
 			}
 			
 		}

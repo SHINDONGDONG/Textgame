@@ -47,10 +47,17 @@ public class CharInfo {
 		}
 	}
 	
-	// 새 게임을 시작하는 유저 체크 or 불러오기(null 체크)
+	// 새 게임을 시작하는 유저 체크 or (null 체크)
 	public static CharInfo loadCharInfo() {
 		return charInfo;
 	}
+	
+	//save.txt 파일을 불러올 때 실행
+	public static void setCharInfo(CharInfo c) {
+		charInfo = c;
+	}
+	
+	
 	
 	//유저체력 보정
 	void modeCharInfo(CharInfo c) throws IOException{

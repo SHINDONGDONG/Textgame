@@ -37,6 +37,7 @@ public class Save {
 		write.append(",");
 	}
 	write.newLine();
+	//남아있는 데이터 모두출력
 	write.flush();
 	write.close();
 	}
@@ -63,7 +64,7 @@ public class Save {
 			
 		}
 		
-		
+		CharInfo.setCharInfo(c);
 		
 		
 		
